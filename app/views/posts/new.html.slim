@@ -1,8 +1,3 @@
-= form_for(@post) do |f|
-  div
-    = f.label :name
-    = f.text_field :name
-  div
-    = f.label :post
-    = f.text_area :body
-  = f.submit
+
+div.flex.w-full.justify-center.mt-20
+  = render 'post_form'
