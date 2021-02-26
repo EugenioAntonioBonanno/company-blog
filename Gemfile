@@ -29,10 +29,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # custom added gems
-
+gem 'activeresource', require: 'active_resource'
 gem 'rspec-rails'
-gem "slim-rails"
-gem 'activeresource'
+gem 'slim-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

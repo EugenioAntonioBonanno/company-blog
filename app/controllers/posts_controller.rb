@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-  include HTTParty
 
   def index
-    response = HTTParty.get('http://localhost:4000/posts')
-    @posts = response.parsed_response['posts']
+    @posts = Post.all
+    p @posts
+    debugger
   end
 
   def new
