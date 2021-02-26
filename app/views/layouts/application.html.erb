@@ -13,6 +13,10 @@
 
   <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <%= render 'layouts/header' %>
-    <%= yield %>
+    <main class="flex flex-wrap mt-5 justify-center w-full">
+      <div class="w-full max-w-screen-xl">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
