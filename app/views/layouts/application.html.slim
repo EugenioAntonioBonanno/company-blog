@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title = 'Company Blog'
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_pack_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track' => true
+
+  body.bg-gray-100.font-sans.leading.normal.tracking-normal
+    =render partial: 'layouts/header'
+    main.flex.flex-wrap.mt-5.justify-center.w-full
+      .w-full.max-w-screen-xl
+        = yield
