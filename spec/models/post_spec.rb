@@ -6,19 +6,20 @@ RSpec.describe Post, type: :model do
 
   # Example of necessary format "Post.create(post: { post: { title: post_params[:title], body: post_params[:body] } })"
   context 'validation tests' do
+    original_post_count = Post.all.length
     it 'ensures title presence' do
-      post = Post.new(post: { post: { title: valid_post_title } }).valid?
-      expect(post).to eq(false)
+      Post.new(post: { post: { title: valid_post_title } }).save
+      expect(original_post_count == Post.all.length).to eq(true)
     end
 
     it 'ensures body presence' do
-      post = Post.new(post: { post: { body: valid_post_body } }).valid?
-      expect(post).to eq(false)
+      Post.new(post: { post: { body: valid_post_body } }).save
+      expect(original_post_count == Post.all.length).to eq(true)
     end
 
-    it 'should save succesfully' do
-      post = Post.new(post: { post: { title: valid_post_title, body: valid_post_body } }).save
-      expect(post).to eq(true)
+    it 'should save successfully' do
+      Post.new(post: { post: { title: valid_post_title, body: valid_post_body } }).save
+      expect(original_post_count < Post.all.length).to eq(true)
     end
   end
 end
