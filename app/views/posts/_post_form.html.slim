@@ -1,8 +1,8 @@
 = form_with(model: @post, class: 'max-w-4xl bg-gray-200 rounded px-5 py-8 w-full' ) do |f|
   div
     = f.label :title, class: 'block font-bold text-2xl mt-4 text-gray-700'
-    = f.text_field :title, class: 'text-sm text-warmGray-600 py-2 px-2 mt-2 mb-3 w-full bg-white rounded border border-solid border-warmGray-300'
+    = f.text_field :title, required: true, minlength: 5, class: 'text-sm text-warmGray-600 py-2 px-2 mt-2 mb-3 w-full bg-white rounded border border-solid border-warmGray-300'
   div
     = f.label :content, class: 'block font-bold text-2xl mt-4 text-gray-700'
-    = f.text_area :body, class: 'text-sm text-warmGray-600 py-2 h-32 px-2 mt-2 mb-3 w-full bg-white rounded border border-solid border-warmGray-300'
-  = f.submit class: 'w-44 flex justify-center py-2 mt-2 px-4 border border-transparent cursor-pointer leading-5 font-medium rounded-md text-white bg-indigo-500 hover:bg-lightBlue-400 focus:outline-nonefocus:border-lightBlue-600 transition duration-150 ease-in-out font-bold'
+    = f.text_area :body, required: true, minlength: 15, class: 'text-sm text-warmGray-600 py-2 h-32 px-2 mt-2 mb-3 w-full bg-white rounded border border-solid border-warmGray-300'
+  = f.submit data: { disable_with: "Please wait..." }, class: 'w-44 flex justify-center py-2 mt-2 px-4 border border-transparent cursor-pointer leading-5 font-medium rounded-md text-white bg-indigo-500 hover:bg-lightBlue-400 focus:outline-nonefocus:border-lightBlue-600 transition duration-150 ease-in-out font-bold'
