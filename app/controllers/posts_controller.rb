@@ -14,11 +14,11 @@ class PostsController < ApplicationController
 
     if Post.create(post: { post: { title: post_params[:title], body: post_params[:body] } })
       flash[:success] = 'Post created'
+      redirect_to root_url
     else
       flash[:danger] = 'Unable to create post'
+      render 'new'
     end
-
-    redirect_to root_url
   end
 
   private

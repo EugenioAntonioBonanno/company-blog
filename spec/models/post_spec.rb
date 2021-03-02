@@ -6,7 +6,7 @@ RSpec.describe Post, type: :model do
     @valid_post_title = 'Valid Title'
     @valid_post_body = 'This is a write up for the post that should always be valid.'
   end
-  
+
   # Example of necessary format "Post.create(post: { post: { title: post_params[:title], body: post_params[:body] } })"
   context 'validation tests' do
     original_post_count = Post.all.length
