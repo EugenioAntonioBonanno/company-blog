@@ -34,6 +34,7 @@
         "lines": [
           null,
           1,
+          null,
           1,
           1,
           null,
@@ -366,6 +367,9 @@
           1,
           1,
           null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -388,6 +392,29 @@
           1,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/shared/web_apps/company-blog/spec/system/creating_blog_posts_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          0,
+          0,
           null,
           null
         ]
@@ -434,7 +461,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
@@ -459,6 +486,6 @@
         ]
       }
     },
-    "timestamp": 1614429248
+    "timestamp": 1614660979
   }
 }
