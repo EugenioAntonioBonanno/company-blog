@@ -13,6 +13,13 @@
       "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin tellus mollis erat varius, eu accumsan est luctus. Praesent eget massa orci. Nam libero massa, dapibus vitae congue vel, rutrum mollis felis. Cras in dolor non lectus malesuada ullamcorper vitae sit amet ante. Duis suscipit nulla sed ex mollis, eget imperdiet mauris tincidunt. Nunc vulputate tortor vitae tincidunt malesuada. Praesent ut placerat lacus. Aliquam aliquam ligula eget volutpat semper. Nam nec dapibus ipsum. Aliquam ac nunc mattis velit finibus imperdiet euismod ac arcu. Praesent a quam vel nulla dapibus facilisis. Aenean fringilla auctor ligula et sagittis. Duis non volutpat tortor. Integer eget odio id libero maximus luctus nec et odio.\n\nSuspendisse vel tellus ornare libero tincidunt mollis. Duis non mollis mi. Morbi lobortis sit amet justo faucibus fringilla. Phasellus tempor massa non turpis vulputate, at ultrices neque tempus. Quisque quis convallis urna. Nam congue sapien sit amet nisi finibus, vitae tincidunt tellus luctus. Curabitur sollicitudin eu ipsum eget suscipit. Nunc lacus ligula, dictum eu ex a, dignissim dapibus arcu. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras euismod lacus elit, in vehicula lorem condimentum sit amet. ",
       "created_at":"2021-02-18 19:04:44 +0800",
       "updated_at":null
+    },
+    {
+      "id":3,
+      "title":"A valid title",
+      "body":"This is written to be a valid post body. It should always work.",
+      "created_at":"2021-02-28 19:04:44 +0800",
+      "updated_at":null
     }
   ]
 }

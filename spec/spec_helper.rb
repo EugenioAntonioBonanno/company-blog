@@ -32,6 +32,8 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
+    starting_posts_json = File.open('spec/fixtures/mock_posts.json')
+
     stub_request(:post, 'http://localhost:4000/posts').to_return(status: 403)
 
     stub_request(:post, "http://localhost:4000/posts").
@@ -44,6 +46,9 @@ RSpec.configure do |config|
           'User-Agent'=>'Ruby'
         }).
       to_return(status: 200, body: '', headers: {})
+
+    stub_request(:get, 'http://localhost:4000/posts').
+      to_return(status: 200, body: starting_posts_json)
 
   end
 
