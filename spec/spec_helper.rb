@@ -1,7 +1,7 @@
 require 'simplecov'
 require 'webmock/rspec'
 
-WebMock.disable_net_connect!(allow_localhost: false)
+WebMock.disable_net_connect!(allow_localhost: true)
 SimpleCov.start
 
 
@@ -24,7 +24,7 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
-  #
+
 
   config.before(:example) do
     @valid_title = 'A valid title'
@@ -32,7 +32,18 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    # stub_request(:post, 'http://localhost:4000/posts').to_return(status: 200)
+    stub_request(:post, 'http://localhost:4000/posts').to_return(status: 403)
+
+    stub_request(:post, "http://localhost:4000/posts").
+      with(
+        body: "{\"post\":{\"title\":\"#{@valid_title}\",\"body\":\"#{@valid_body}\"}}",
+        headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Content-Type'=>'application/json',
+          'User-Agent'=>'Ruby'
+        }).
+      to_return(status: 200, body: '', headers: {})
 
   end
 
