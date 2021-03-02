@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  
+
   # Example of necessary format "Post.create(post: { post: { title: post_params[:title], body: post_params[:body] } })"
   context 'validation tests' do
     it 'ensures title presence' do
