@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-02T13:37:38+08:00">2021-03-02T13:37:38+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-02T13:52:32+08:00">2021-03-02T13:52:32+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.64%
+  97.74%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="green">
+         1.01
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>127</b> relevant lines,
-    <span class="green"><b>124</b> lines covered</span> and
+    <b>133</b> relevant lines,
+    <span class="green"><b>130</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  97.64%
+  97.74%
 </span>
 )
   </div>
@@ -110,7 +110,7 @@
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.17</td>
             
           </tr>
         
@@ -271,9 +271,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a325f786efa024355f46bcdecf4fec0cab1db848" class="src_link" title="spec/models/post_spec.rb">spec/models/post_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">25</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -304,9 +304,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#bec81042048cf8ef6a29aa8e59807743b4d588d6" class="src_link" title="spec/system/creating_blog_posts_spec.rb">spec/system/creating_blog_posts_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">28</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -955,8 +955,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="11">
+            <span class="hits">2</span>
             
 
             
@@ -3651,8 +3651,8 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3697,13 +3697,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">  valid_post_title = &#39;Valid Title&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3714,210 +3714,34 @@
 
             
 
-            <code class="ruby">  valid_post_body = &#39;This is a write up for the post that should always be valid.&#39;</code>
+            <code class="ruby">  before(:context) do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">  # Example of necessary format &quot;Post.create(post: { post: { title: post_params[:title], body: post_params[:body] } })&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  context &#39;validation tests&#39; do</code>
+            <code class="ruby">    @valid_post_title = &#39;Valid Title&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    original_post_count = Post.all.length</code>
+            <code class="ruby">    @valid_post_body = &#39;This is a write up for the post that should always be valid.&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;ensures title presence&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      Post.new(post: { post: { title: valid_post_title } }).save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(original_post_count == Post.all.length).to eq(true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;ensures body presence&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      Post.new(post: { post: { body: valid_post_body } }).save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(original_post_count == Post.all.length).to eq(true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;should save successfully&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      Post.new(post: { post: { title: valid_post_title, body: valid_post_body } }).save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(original_post_count &lt; Post.all.length).to eq(true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -3928,7 +3752,216 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  # Example of necessary format &quot;Post.create(post: { post: { title: post_params[:title], body: post_params[:body] } })&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;validation tests&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    original_post_count = Post.all.length</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;ensures title presence&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      Post.new(post: { post: { title: @valid_post_title } }).save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(original_post_count == Post.all.length).to eq(true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;ensures body presence&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      Post.new(post: { post: { body: @valid_post_body } }).save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(original_post_count == Post.all.length).to eq(true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;should save successfully&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      Post.new(post: { post: { title: @valid_post_title, body: @valid_post_body } }).save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(original_post_count &lt; Post.all.length).to eq(true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -4744,7 +4777,7 @@
 
             
 
-            <code class="ruby">RSpec.describe &quot;Posts&quot;, type: :request do</code>
+            <code class="ruby">RSpec.describe &#39;Posts&#39;, type: :request do</code>
           </li>
         </div>
       
@@ -4766,7 +4799,7 @@
 
             
 
-            <code class="ruby">  describe &quot;GET /index&quot; do</code>
+            <code class="ruby">  describe &#39;GET /index&#39; do</code>
           </li>
         </div>
       
@@ -4777,7 +4810,7 @@
 
             
 
-            <code class="ruby">    it &quot;returns http success&quot; do</code>
+            <code class="ruby">    it &#39;returns http success&#39; do</code>
           </li>
         </div>
       
@@ -4788,7 +4821,7 @@
 
             
 
-            <code class="ruby">      get &quot;/posts/index&quot;</code>
+            <code class="ruby">      get &#39;/posts/index&#39;</code>
           </li>
         </div>
       
@@ -4843,7 +4876,7 @@
 
             
 
-            <code class="ruby">  describe &quot;GET /new&quot; do</code>
+            <code class="ruby">  describe &#39;GET /new&#39; do</code>
           </li>
         </div>
       
@@ -4854,7 +4887,7 @@
 
             
 
-            <code class="ruby">    it &quot;returns http success&quot; do</code>
+            <code class="ruby">    it &#39;returns http success&#39; do</code>
           </li>
         </div>
       
@@ -4865,7 +4898,7 @@
 
             
 
-            <code class="ruby">      get &quot;/posts/new&quot;</code>
+            <code class="ruby">      get &#39;/posts/new&#39;</code>
           </li>
         </div>
       
@@ -4943,8 +4976,8 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5039,7 +5072,7 @@
 
             
 
-            <code class="ruby">  it &#39;saves and displays created blog post&#39; do</code>
+            <code class="ruby">  before(:context) do</code>
           </li>
         </div>
       
@@ -5050,12 +5083,34 @@
 
             
 
-            <code class="ruby">    visit &#39;/posts/new&#39;</code>
+            <code class="ruby">    @title = &#39;A blog title&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @body = &#39;This is a bunch of stuff to create a body for a post&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -5066,35 +5121,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    fill_in &#39;post[title]&#39;, with: &#39;A blog title&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    fill_in &#39;post[body]&#39;, with: &#39;This is a bunch of stuff to create a body for a post&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby"></code>
+            <code class="ruby">  it &#39;saves and displays created blog post&#39; do</code>
           </li>
         </div>
       
@@ -5105,7 +5138,7 @@
 
             
 
-            <code class="ruby">    find(&#39;input[name=&quot;commit&quot;]&#39;).click</code>
+            <code class="ruby">    visit &#39;/posts/new&#39;</code>
           </li>
         </div>
       
@@ -5127,7 +5160,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&#39;A blog title&#39;)</code>
+            <code class="ruby">    fill_in &#39;post[title]&#39;, with: @title</code>
           </li>
         </div>
       
@@ -5138,7 +5171,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&#39;This is a bunch of stuff to create a body&#39;)</code>
+            <code class="ruby">    fill_in &#39;post[body]&#39;, with: @body</code>
           </li>
         </div>
       
@@ -5160,7 +5193,7 @@
 
             
 
-            <code class="ruby">    post = Post.all</code>
+            <code class="ruby">    find(&#39;input[name=&quot;commit&quot;]&#39;).click</code>
           </li>
         </div>
       
@@ -5171,12 +5204,89 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(@title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(@body)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    post = Post.ordered_posts.first</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(post.title).to eq(@title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(post.body).to eq(@body)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
