@@ -1,17 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
+RSpec.describe 'Posts', type: :request do
 
-  describe "GET /index" do
-    it "returns http success" do
-      get "/posts/index"
+  describe 'GET /index' do
+    it 'returns http success' do
+      get '/posts/index'
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET /new" do
-    it "returns http success" do
-      get "/posts/new"
+  describe 'GET /new' do
+    it 'returns http success' do
+      get '/posts/new'
       expect(response).to have_http_status(:success)
     end
   end
