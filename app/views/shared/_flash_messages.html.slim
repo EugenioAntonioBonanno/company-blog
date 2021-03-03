@@ -1,0 +1,12 @@
+-flash.each do |msg_type, msg|
+
+  #flash.flex.justify-center
+    .text-white.shadow.max-w-4xl.w-full.px-4.py-4.border-0.rounded.fixed.mx-20.my-4.z-10[class = "bg-#{msg_type == 'success' ? 'green' : 'red'}-400"]
+      span.inline-block.align-middle.mr-8 #{msg}
+      button#hide-flash.absolute.bg-transparent.text-2xl.font-semibold.leading-none.right-0.top-0.mt-4.mr-6.outline-none X
+
+
+javascript:
+  document.getElementById('hide-flash') && document.getElementById('hide-flash').addEventListener('click', function () {
+    document.getElementById('flash').remove();
+  });
