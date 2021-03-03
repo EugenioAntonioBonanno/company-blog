@@ -1,6 +1,7 @@
 li.bg-gray-200.py-5.px-5.my-10.mx-5
-  div.py-2
+  .pt-3
     h1.text-xl.font-semibold.text-gray-700.mb-10 #{post.title}
     .pl-10.text-gray-600 #{post.body}
-    span.float-right.text-gray-500 #{post.created_at.in_time_zone.utc}
-    
+    .pt-5.pb-2.px-3
+      span.float-right.text-gray-400 #{post.created_at.in_time_zone.utc}
+      button.text-gray-700.rounded-lg.bg-gray-400.py-1.px-2.font-semibold #{post.comments.length} comments
