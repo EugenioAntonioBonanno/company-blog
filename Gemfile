@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # custom added gems
 gem 'activeresource', require: 'active_resource'
+gem 'will_paginate'
 gem 'slim-rails'
 
 

@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
+  require 'will_paginate/array'
 
   def index
-    @posts = Post.ordered_posts
+    @posts = Post.ordered_posts.paginate(page: params[:page], per_page: 5)
   end
 
   def new

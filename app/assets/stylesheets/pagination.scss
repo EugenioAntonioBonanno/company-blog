@@ -1,0 +1,54 @@
+// DIGG.com styles for will_paginate with slight adjustments to spacing and color
+
+.pagination {
+  cursor: default;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  /* self-clearing method: */ }
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+  border-radius: 7px;
+  display: block;
+  float: left;
+  margin-left: 2px;
+  margin-top: 5px;
+  margin-right: 2px; }
+.pagination .disabled {
+  color: #999999;
+  border: 2px solid #dddddd; }
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 2px solid #2e6ab1; }
+.pagination a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #105cb6;
+  border: 2px solid #9aafe5; }
+.pagination a:hover, .pagination a:focus {
+  color: #000033;
+  border-color: #000033; }
+.pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center; }
+.pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em; }
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+* html .pagination {
+  height: 1%; }
+*:first-child + html .pagination {
+  overflow: hidden; }
