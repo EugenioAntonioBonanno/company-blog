@@ -345,6 +345,7 @@
         "lines": [
           1,
           1,
+          1,
           null,
           1,
           null
@@ -356,19 +357,27 @@
           null
         ]
       },
+      "/shared/web_apps/company-blog/app/helpers/comments_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/shared/web_apps/company-blog/app/models/post.rb": {
         "lines": [
           1,
           1,
           1,
           null,
+          1,
+          null,
           null,
           null,
           null,
           null,
           1,
           1,
-          2,
+          3,
           null,
           null,
           null
@@ -404,6 +413,12 @@
           1,
           1,
           1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           1,
@@ -461,9 +476,14 @@
       "/shared/web_apps/company-blog/app/controllers/posts_controller.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
+          2,
+          null,
+          null,
           1,
+          0,
           null,
           null,
           1,
@@ -487,11 +507,24 @@
           null,
           1,
           2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/shared/web_apps/company-blog/app/models/comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1614739646
+    "timestamp": 1614780331
   }
 }
