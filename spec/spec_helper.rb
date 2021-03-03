@@ -38,7 +38,8 @@ RSpec.configure do |config|
 
     stub_request(:post, "http://localhost:4000/posts").
       with(
-        body: "{\"post\":{\"title\":\"#{@valid_title}\",\"body\":\"#{@valid_body}\"}}",
+        # Regex checks for properly formed params with title of 3 chars or longer and body of 15 or longer
+        body: /^{"post":{"title":".{3,}","body":".{15,}"}}$/,
         headers: {
           'Accept'=>'*/*',
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
