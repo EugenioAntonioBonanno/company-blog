@@ -12,7 +12,9 @@ RSpec.describe "CreatingBlogPosts", type: :system do
     fill_in 'post[body]', with: @valid_body
 
     find('input[name="commit"]').click
+    debugger
 
+    expect(page).to have_http_status(200)
     expect(page).to have_content(@valid_title)
     expect(page).to have_content(@valid_body)
 
