@@ -1,5 +1,5 @@
 class Post < ActiveResource::Base
-  self.site = 'https://911e087aec31.ngrok.io'
+  self.site = 'http://localhost:4000'
   self.include_format_in_path = false
 
   # VALIDATIONS
