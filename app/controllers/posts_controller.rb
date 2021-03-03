@@ -5,6 +5,10 @@ class PostsController < ApplicationController
     @posts = Post.ordered_posts.paginate(page: params[:page], per_page: 5)
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
@@ -28,7 +32,4 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :body)
   end
 
-  def get_comments
-
-  end
 end
