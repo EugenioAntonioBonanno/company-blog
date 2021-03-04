@@ -5,10 +5,8 @@
   h2.font-semi-bold.text-gray-800.text-2xl.mb-8 Comments
   section.bg-gray-200.rounded-lg.py-3.px-3
     = render partial: 'comments/comment_form'
-  - @post.comments.each do |comment|
-    #comment-section.my-5.pb-2.ml-3.border-b
-      section.mb-3.text-gray-700.text-lg #{comment.body}
-      span.text-gray-800.ml-2 #{comment.name}
-      span.float-right.text-gray-600 #{comment.created_at.in_time_zone.utc}
+  #comment-section
+    - @post.comments.each do |comment|
+      = render partial: 'comments/comment', locals: { comment: comment }
 
 
