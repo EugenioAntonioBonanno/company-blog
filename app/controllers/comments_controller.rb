@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     comment.prefix_options[:post_id] = comment_params[:post_id]
 
     if comment.save
-      
+
     end
   end
 
@@ -15,6 +15,5 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:post).permit(:name, :body, :post_id)
   end
-
 end
 
