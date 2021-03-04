@@ -1,5 +1,12 @@
 document.getElementById('comment-title').value = '';
 document.getElementById('comment-body').value = '';
 
+var newComment = '<%= escape_javascript(render partial: "comments/comment", locals: { comment: @comment }) %>'
+var wrapper= document.createElement('div');
+wrapper.innerHTML = newComment;
+var newCommentNode = wrapper.firstChild;
 
-document.getElementById('comment-section').appendChild('gino')
+document.getElementById('comment-section').appendChild(newCommentNode);
+
+window.scrollTo(0,document.body.scrollHeight);
+
