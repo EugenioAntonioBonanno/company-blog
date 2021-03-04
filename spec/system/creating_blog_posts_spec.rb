@@ -5,11 +5,11 @@ RSpec.describe "CreatingBlogPosts", type: :system do
     driven_by(:rack_test)
   end
 
-  # it 'can navigate to post/new' do
-  #   visit '/'
-  #   click_on('Create Post')
-  #   expect(page).to have_content('Title')
-  # end
+  it 'can navigate to post/new' do
+    visit root_path
+    click_on('Create Post')
+    expect(page).to have_content('Title')
+  end
 
   it 'saves and displays created blog post' do
     visit '/posts/new'
