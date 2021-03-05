@@ -32,18 +32,19 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
+    base_url = 'https://57a69edbcaa3.ngrok.io'
     starting_posts_json = File.open('spec/fixtures/mock_posts.json')
     first_post_json = File.open('spec/fixtures/mock_post_1.json')
     first_post_comments_json = File.open('spec/fixtures/mock_post_1_comments.json')
 
     # Stubbing for requests to /posts
-    stub_request(:get, 'http://localhost:4000/posts').
+    stub_request(:get, "#{base_url}/posts").
       to_return(status: 200, body: starting_posts_json)
 
-    stub_request(:post, 'http://localhost:4000/posts').
+    stub_request(:post, "#{base_url}/posts").
       to_return(status: 403)
 
-    stub_request(:post, 'http://localhost:4000/posts').
+    stub_request(:post, "#{base_url}/posts").
       with(
         # Regex checks for properly formed params with title of 3 chars or longer and body of 15 or longer
         body: /^{"post":{"title":".{3,}","body":".{15,}"}}$/,
@@ -57,7 +58,7 @@ RSpec.configure do |config|
 
 
     # Stubbing for requests to /posts/:id
-    stub_request(:get, 'http://localhost:4000/posts/1').
+    stub_request(:get, "#{base_url}/posts/1").
       with(
         headers: {
             'Accept'=>'application/json',
@@ -68,7 +69,7 @@ RSpec.configure do |config|
 
 
     # Stubbing for requests to /posts/:id/comments
-    stub_request(:get, "http://localhost:4000/posts/3/comments").
+    stub_request(:get, "#{base_url}/posts/3/comments").
       with(
         headers: {
           'Accept'=>'application/json',
@@ -77,7 +78,7 @@ RSpec.configure do |config|
         }).
       to_return(status: 200, body: '', headers: {})
 
-    stub_request(:get, 'http://localhost:4000/posts/1/comments').
+    stub_request(:get, "#{base_url}/posts/1/comments").
       with(
         headers: {
           'Accept'=>'application/json',
@@ -86,9 +87,8 @@ RSpec.configure do |config|
         }).
       to_return(status: 200, body: first_post_comments_json, headers: {})
 
-    stub_request(:post, 'http://localhost:4000/posts/1/comments').
+    stub_request(:post, "#{base_url}/posts/1/comments").
       to_return(status: 403)
-
     stub_request(:post, "http://localhost:4000/posts/1/comments").
       with(
         body: /^{"comment":{"name":".{1,},"body":".{1,}"}}$/,
@@ -101,7 +101,7 @@ RSpec.configure do |config|
       to_return(status: 200, body: '', headers: {})
 
 
-    stub_request(:post, 'http://localhost:4000/posts/1/comments').
+    stub_request(:post, "#{base_url}/posts/1/comments").
       with(
         body: /^{"name":".{1,}","body":".{1,}"}$/,
         headers: {

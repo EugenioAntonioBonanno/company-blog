@@ -1,5 +1,5 @@
 class Comment < ActiveResource::Base
-  self.site = 'http://6449d9ab7479.ngrok.io/posts/:post_id'
+  self.site = 'https://57a69edbcaa3.ngrok.io/posts/:post_id'
   self.prefix = '/posts/:post_id/'
   self.include_format_in_path = false
 
