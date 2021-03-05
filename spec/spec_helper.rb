@@ -21,20 +21,25 @@ SimpleCov.start
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  # rspec-expectations config goes here. You can use an alternate
+  # rspec-expectations config goes here. You can use an alternater
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
 
 
   config.before(:example) do
-    @valid_title = 'A valid title'
-    @valid_body = 'This is written to be a valid post body. It should always work.'
+    @valid_post_title = 'A valid title'
+    @valid_post_body = 'This is written to be a valid post body. It should always work.'
   end
 
   config.before(:each) do
     starting_posts_json = File.open('spec/fixtures/mock_posts.json')
 
-    stub_request(:post, 'http://localhost:4000/posts').to_return(status: 403)
+    # Stubbing for requests to /posts
+    stub_request(:get, 'http://localhost:4000/posts')
+      .to_return(status: 200, body: starting_posts_json)
+
+    stub_request(:post, 'http://localhost:4000/posts')
+      .to_return(status: 403)
 
     stub_request(:post, "http://localhost:4000/posts").
       with(
@@ -45,20 +50,34 @@ RSpec.configure do |config|
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Content-Type'=>'application/json',
           'User-Agent'=>'Ruby'
-        }).
-      to_return(status: 200, body: '', headers: {})
+        })
+      .to_return(status: 200, body: '', headers: {})
 
-    stub_request(:get, 'http://localhost:4000/posts').
-      to_return(status: 200, body: starting_posts_json)
 
+    # Stubbing for requests to /posts/:id/comments
     stub_request(:get, "http://localhost:4000/posts/3/comments").
       with(
         headers: {
           'Accept'=>'application/json',
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'User-Agent'=>'Ruby'
-        }).
-      to_return(status: 200, body: "", headers: {})
+        })
+      .to_return(status: 200, body: '', headers: {})
+
+    stub_request(:post, 'http://localhost:4000/posts/1/comments')
+      .to_return(status: 403)
+
+    stub_request(:post, "http://localhost:4000/posts/1/comments").
+      with(
+        body: "{\"name\":\"Gino\",\"body\":\"this is a comment\"}",
+        headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Content-Type'=>'application/json',
+          'User-Agent'=>'Ruby'
+        })
+      .to_return(status: 200, body: "", headers: {})
+
 
   end
 

@@ -1,22 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/shared/web_apps/company-blog/spec/models/post_spec.rb": {
+      "/shared/web_apps/company-blog/spec/models/comment_spec.rb": {
         "lines": [
           1,
           null,
           1,
+          1,
+          3,
+          3,
           null,
           null,
+          1,
+          1,
           1,
           1,
           2,
           null,
           null,
           1,
+          1,
+          1,
           2,
           null,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -366,6 +375,43 @@
           null
         ]
       },
+      "/shared/web_apps/company-blog/app/models/comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/shared/web_apps/company-blog/spec/models/post_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/shared/web_apps/company-blog/app/models/post.rb": {
         "lines": [
           1,
@@ -516,6 +562,6 @@
         ]
       }
     },
-    "timestamp": 1614925454
+    "timestamp": 1614927844
   }
 }
