@@ -1,7 +1,7 @@
 require 'simplecov'
 require 'webmock/rspec'
 
-WebMock.disable_net_connect!(allow_localhost: true)
+WebMock.disable_net_connect!(allow_localhost: false)
 SimpleCov.start
 
 
@@ -50,6 +50,15 @@ RSpec.configure do |config|
 
     stub_request(:get, 'http://localhost:4000/posts').
       to_return(status: 200, body: starting_posts_json)
+
+    stub_request(:get, "http://localhost:4000/posts/3/comments").
+      with(
+        headers: {
+          'Accept'=>'application/json',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Ruby'
+        }).
+      to_return(status: 200, body: "", headers: {})
 
   end
 
