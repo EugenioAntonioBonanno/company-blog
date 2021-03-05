@@ -69,7 +69,7 @@ RSpec.configure do |config|
 
     stub_request(:post, "http://localhost:4000/posts/1/comments").
       with(
-        body: "{\"name\":\"Gino\",\"body\":\"this is a comment\"}",
+        body: /^{"name":".{1,}","body":".{1,}"}$/,
         headers: {
           'Accept'=>'*/*',
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
