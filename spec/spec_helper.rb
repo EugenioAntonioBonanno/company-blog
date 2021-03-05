@@ -33,15 +33,17 @@ RSpec.configure do |config|
 
   config.before(:each) do
     starting_posts_json = File.open('spec/fixtures/mock_posts.json')
+    first_post_json = File.open('spec/fixtures/mock_post_1.json')
+    first_post_comments_json = File.open('spec/fixtures/mock_post_1_comments.json')
 
     # Stubbing for requests to /posts
-    stub_request(:get, 'http://localhost:4000/posts')
-      .to_return(status: 200, body: starting_posts_json)
+    stub_request(:get, 'http://localhost:4000/posts').
+      to_return(status: 200, body: starting_posts_json)
 
-    stub_request(:post, 'http://localhost:4000/posts')
-      .to_return(status: 403)
+    stub_request(:post, 'http://localhost:4000/posts').
+      to_return(status: 403)
 
-    stub_request(:post, "http://localhost:4000/posts").
+    stub_request(:post, 'http://localhost:4000/posts').
       with(
         # Regex checks for properly formed params with title of 3 chars or longer and body of 15 or longer
         body: /^{"post":{"title":".{3,}","body":".{15,}"}}$/,
@@ -50,8 +52,18 @@ RSpec.configure do |config|
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Content-Type'=>'application/json',
           'User-Agent'=>'Ruby'
-        })
-      .to_return(status: 200, body: '', headers: {})
+        }).
+      to_return(status: 200, body: '', headers: {})
+
+    # Stubbing for requests to /posts/:id
+    stub_request(:get, 'http://localhost:4000/posts/1').
+      with(
+        headers: {
+            'Accept'=>'application/json',
+            'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+            'User-Agent'=>'Ruby'
+        }).
+      to_return(status: 200, body: first_post_json, headers: {})
 
 
     # Stubbing for requests to /posts/:id/comments
@@ -61,13 +73,22 @@ RSpec.configure do |config|
           'Accept'=>'application/json',
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'User-Agent'=>'Ruby'
-        })
-      .to_return(status: 200, body: '', headers: {})
+        }).
+      to_return(status: 200, body: '', headers: {})
 
-    stub_request(:post, 'http://localhost:4000/posts/1/comments')
-      .to_return(status: 403)
+    stub_request(:get, 'http://localhost:4000/posts/1/comments').
+      with(
+        headers: {
+          'Accept'=>'application/json',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Ruby'
+        }).
+      to_return(status: 200, body: first_post_comments_json, headers: {})
 
-    stub_request(:post, "http://localhost:4000/posts/1/comments").
+    stub_request(:post, 'http://localhost:4000/posts/1/comments').
+      to_return(status: 403)
+
+    stub_request(:post, 'http://localhost:4000/posts/1/comments').
       with(
         body: /^{"name":".{1,}","body":".{1,}"}$/,
         headers: {
@@ -75,10 +96,9 @@ RSpec.configure do |config|
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
           'Content-Type'=>'application/json',
           'User-Agent'=>'Ruby'
-        })
-      .to_return(status: 200, body: "", headers: {})
-
-
+        }).
+      to_return(status: 200, body: '', headers: {})
+    
   end
 
   config.expect_with :rspec do |expectations|

@@ -489,6 +489,26 @@
           null
         ]
       },
+      "/shared/web_apps/company-blog/spec/system/creating_comments_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/shared/web_apps/company-blog/spec/views/posts/index.html.slim_spec.rb": {
         "lines": [
           1,
@@ -532,7 +552,7 @@
           null,
           null,
           1,
-          0,
+          1,
           null,
           null,
           1,
@@ -562,6 +582,6 @@
         ]
       }
     },
-    "timestamp": 1614928521
+    "timestamp": 1614931230
   }
 }
