@@ -5,12 +5,11 @@ RSpec.describe "CreatingComments", type: :system do
     driven_by(:rack_test)
   end
 
-  it 'can navigate to first post' do
+  it 'can navigate to post page to create comment' do
     visit '/posts/1'
-
-  end
-
-  it 'saves and displays created comment ' do
+    expect(page).to have_selector('#comment-title')
+    expect(page).to have_selector('#comment-body')
+    expect(page).to have_selector('input[type=submit]')
 
   end
 end

@@ -55,6 +55,7 @@ RSpec.configure do |config|
         }).
       to_return(status: 200, body: '', headers: {})
 
+
     # Stubbing for requests to /posts/:id
     stub_request(:get, 'http://localhost:4000/posts/1').
       with(
@@ -88,6 +89,18 @@ RSpec.configure do |config|
     stub_request(:post, 'http://localhost:4000/posts/1/comments').
       to_return(status: 403)
 
+    stub_request(:post, "http://localhost:4000/posts/1/comments").
+      with(
+        body: /^{"comment":{"name":".{1,},"body":".{1,}"}}$/,
+        headers: {
+            'Accept'=>'*/*',
+            'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+            'Content-Type'=>'application/json',
+            'User-Agent'=>'Ruby'
+        }).
+      to_return(status: 200, body: '', headers: {})
+
+
     stub_request(:post, 'http://localhost:4000/posts/1/comments').
       with(
         body: /^{"name":".{1,}","body":".{1,}"}$/,
@@ -98,7 +111,6 @@ RSpec.configure do |config|
           'User-Agent'=>'Ruby'
         }).
       to_return(status: 200, body: '', headers: {})
-    
   end
 
   config.expect_with :rspec do |expectations|
