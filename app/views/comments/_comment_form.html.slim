@@ -1,3 +1,4 @@
+/ Client side validations referenced in model, if changed update
 = form_with(model: @post, url: post_comments_path(@post), method: :post, remote: true) do |f|
   div.inline-block
     = f.label :name, class: 'font-semi-bold text-xl mr-2 text-gray-700'
