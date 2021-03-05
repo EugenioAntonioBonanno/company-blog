@@ -7,8 +7,10 @@ class CommentsController < ApplicationController
     if @comment.save
       respond_to do |format|
         format.js {}
-        format.html {}
       end
+    else
+      flash[:danger] = 'Failed to create comment'
+      redirect_back(fallback_location: root_path)
     end
   end
 
