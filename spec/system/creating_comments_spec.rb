@@ -10,6 +10,5 @@ RSpec.describe "CreatingComments", type: :system do
     expect(page).to have_selector('#comment-title')
     expect(page).to have_selector('#comment-body')
     expect(page).to have_selector('input[type=submit]')
-
   end
 end
