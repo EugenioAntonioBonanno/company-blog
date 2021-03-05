@@ -31,7 +31,7 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    base_url = 'https://57a69edbcaa3.ngrok.io'
+    base_url = 'http://localhost:4000'
     starting_posts_json = File.open('spec/fixtures/mock_posts.json')
     first_post_json = File.open('spec/fixtures/mock_post_1.json')
     first_post_comments_json = File.open('spec/fixtures/mock_post_1_comments.json')

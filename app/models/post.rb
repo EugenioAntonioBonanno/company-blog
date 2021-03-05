@@ -1,5 +1,5 @@
 class Post < ActiveResource::Base
-  self.site = 'https://57a69edbcaa3.ngrok.io'
+  self.site = 'http://localhost:4000/'
   self.include_format_in_path = false
 
   has_many :comments
