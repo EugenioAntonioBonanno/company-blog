@@ -25,7 +25,6 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
 
-
   config.before(:example) do
     @valid_post_title = 'A valid title'
     @valid_post_body = 'This is written to be a valid post body. It should always work.'

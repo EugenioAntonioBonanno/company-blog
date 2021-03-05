@@ -5,5 +5,4 @@ class Comment < ActiveResource::Base
 
   # VALIDATIONS #
   # Both server and client require name and body to be present
-
 end
